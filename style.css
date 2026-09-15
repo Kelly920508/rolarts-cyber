@@ -1,7 +1,11 @@
 /* ============================================
    ROLARTS CYBER — design tokens
    Palette pulled straight from the client's own
-   logo mark: printer-toner yellow, cyan, red.
+   logo mark: red, black and white. --yellow and
+   --teal are kept as variable names for the
+   service-group dots but now hold neutral black/
+   grey tones instead of colour, so red stays the
+   one accent colour across the whole site.
    Type: a blocky grotesk for headings (echoes the
    wordmark), a plain body face, and a monospace
    "receipt printer" face for tags/labels — this is
@@ -9,8 +13,8 @@
    ============================================ */
 
 :root{
-  --yellow: #FFC72C;
-  --teal:   #17B8C4;
+  --yellow: #17181A;
+  --teal:   #9A9B95;
   --red:    #E9372B;
   --ink:    #17181A;
   --paper:  #FBF9F4;
@@ -116,7 +120,7 @@ nav.links a{
   padding: 4px 0;
 }
 nav.links a.active{ color: var(--red); }
-nav.links a:hover{ color: var(--teal); }
+nav.links a:hover{ color: var(--red); }
 
 .nav-cta{
   display:flex;
@@ -147,7 +151,7 @@ nav.links a:hover{ color: var(--teal); }
   background: transparent;
   color: var(--ink);
 }
-.btn-outline:hover{ background: var(--yellow); }
+.btn-outline:hover{ background: var(--red); color: var(--paper); border-color: var(--red); }
 
 .menu-toggle{
   display:none;
@@ -249,7 +253,7 @@ nav.links a:hover{ color: var(--teal); }
   font-size:14px;
   font-weight:700;
 }
-.hero-card .total span:last-child{ color: var(--yellow); }
+.hero-card .total span:last-child{ color: var(--red); }
 
 /* ---------- section shell ---------- */
 section{ padding: 72px 0; }
@@ -313,6 +317,24 @@ section{ padding: 72px 0; }
 .dot-teal{ background: var(--teal); }
 .dot-red{ background: var(--red); }
 
+/* ---------- services flyer ---------- */
+.svc-flyer{
+  display:block;
+  max-width: 420px;
+  margin: 0 auto;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 6px 18px #17181a33;
+}
+.svc-flyer img{
+  width:100%;
+  height:auto;
+  display:block;
+  transition: transform .35s ease;
+}
+.svc-flyer:hover img{ transform: scale(1.03); }
+
 /* ---------- gallery ---------- */
 .gallery-grid{
   display:grid;
@@ -369,7 +391,7 @@ section{ padding: 72px 0; }
   font-size: 22px;
   max-width: 30ch;
 }
-.band .btn-primary{ background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+.band .btn-primary{ background: var(--paper); color: var(--ink); border-color: var(--paper); }
 .band .btn-primary:hover{ background: var(--red); color: var(--paper); border-color: var(--red); }
 
 /* ---------- steps (process) ---------- */
@@ -421,7 +443,7 @@ section{ padding: 72px 0; }
 }
 .info-row h4{ font-size:14px; margin-bottom:4px; }
 .info-row p, .info-row a{ font-size: 14px; color:#33342f; }
-.info-row a:hover{ color: var(--teal); }
+.info-row a:hover{ color: var(--red); }
 
 .map-frame{
   border: 1.5px solid var(--ink);
@@ -474,7 +496,7 @@ footer{
   box-shadow: 0 6px 18px #17181a33;
   transition: transform .15s ease, background .15s ease;
 }
-.wa-float:hover{ background: var(--teal); transform: scale(1.06); }
+.wa-float:hover{ background: var(--red); transform: scale(1.06); }
 
 /* ---------- page hero (inner pages) ---------- */
 .page-hero{
